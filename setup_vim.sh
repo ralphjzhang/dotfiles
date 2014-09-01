@@ -1,3 +1,4 @@
+vim -c "so conque_2.3.vmb" +qall
 wget https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh -O- | sh
 
 cat > ~/.vimrc <<EOF
@@ -28,7 +29,6 @@ NeoBundle 'Shougo/vimproc.vim', {
       \     'unix' : 'make -f make_unix.mak',
       \    },
       \ }
-NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
@@ -165,8 +165,8 @@ let g:airline#extensions#tabline#enabled=1
 "======================
 "  VimShell
 "======================
-map <leader>sh  :VimShell<CR>
-map <leader>shn :VimShellCreate<CR>
+map <leader>sh  :ConqueTerm zsh<CR>
+map <leader>shs :ConqueTermSplit zsh<CR>
 
 "======================
 "  Unite
