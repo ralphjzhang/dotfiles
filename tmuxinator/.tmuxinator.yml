@@ -1,0 +1,10 @@
+name: yi-vm
+root: ~/
+windows:
+  - commands:
+      layout: even-horizontal
+      panes:
+        - cd
+        - cd Work
+  - code: cd ~/Work/infra/yi
+

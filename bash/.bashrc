@@ -114,6 +114,7 @@ if ! shopt -oq posix; then
 fi
 
 export PATH="/opt/devops/bin:$PATH:~/anaconda3/bin"
+export EDITOR='vim'
 
 # my aliases
 alias tmux='tmux -2' # force tmux 256 colors
