@@ -78,8 +78,10 @@ if has("gui_running")
   set guifont=Monaco:h11
 endif
 set background=dark
+
+" wget https://github.com/jnurmine/Zenburn/raw/master/colors/zenburn.vim
 try
-  colorscheme peaksea
+  colorscheme zenburn
 catch
   colorscheme desert
 endtry
