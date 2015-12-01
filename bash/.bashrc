@@ -113,10 +113,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$PATH:/opt/devops/bin"
+export PATH="/opt/devops/bin:$PATH:~/anaconda3/bin"
 
 # my aliases
 alias sshvm='ssh vm-zhjun-centos'
 alias cl='clang++ -L/opt/devops/lib -lc++abi'
 alias LDLP='LD_LIBRARY_PATH=/opt/devops/lib'
+
+# use bash vi mode
+set -o vi
 

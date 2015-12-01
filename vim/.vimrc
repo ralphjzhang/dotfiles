@@ -97,9 +97,9 @@ set smartindent
 set autoindent
 set cindent
 set cinoptions=:0g0t0
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 set smarttab
 " Searching
@@ -154,14 +154,6 @@ map <C-right>  :wincmd ><CR>
 "  vim-airline
 "======================
 let g:airline#extensions#tabline#enabled=1
-
-"======================
-"  ConqueTerm
-"======================
-let g:ConqueTerm_TERM = 'xterm-256color'
-map <leader>sh  :ConqueTerm zsh<CR>
-map <leader>shs :ConqueTermSplit zsh<CR>
-map <leader>shv :ConqueTermVSplit zsh<CR>
 
 "======================
 "  Rainbow Parentheses
