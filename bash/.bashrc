@@ -118,7 +118,7 @@ export EDITOR='vim'
 
 # my aliases
 alias tmux='tmux -2' # force tmux 256 colors
-alias sshvm='ssh vm-zhjun-centos'
+alias sshvm='ssh zhjun-c7'
 alias cl='clang++ -L/opt/devops/lib -lc++abi'
 alias LDLP='LD_LIBRARY_PATH=/opt/devops/lib'
 
