@@ -25,13 +25,14 @@ NeoBundle 'Shougo/vimproc.vim', {
       \     'unix' : 'make -f make_unix.mak',
       \    },
       \ }
-NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'rhysd/vim-clang-format'
 NeoBundle 'vim-scripts/a.vim'
 NeoBundle 'L9'
 NeoBundle 'FuzzyFinder'
+NeoBundle 'Valloric/YouCompleteMe'
 
 call neobundle#end()
 
@@ -152,6 +153,13 @@ map <C-down>   :wincmd -<CR>
 map <C-left>   :wincmd <<CR>
 map <C-right>  :wincmd ><CR>
 
+
+"======================
+"  vimshell
+"======================
+nnoremap <leader>vs :VimShell<CR>
+let g:vimshell_prompt_expr='escape(fnamemodify(getcwd(), ":~").">", "\\[]()?! ")." "'
+let g:vimshell_prompt_pattern='^\%(\f\|\\.\)\+> '
 "======================
 "  vim-airline
 "======================
