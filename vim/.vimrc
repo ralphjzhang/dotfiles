@@ -160,10 +160,12 @@ map <C-right>  :wincmd ><CR>
 nnoremap <leader>vs :VimShell<CR>
 let g:vimshell_prompt_expr='escape(fnamemodify(getcwd(), ":~").">", "\\[]()?! ")." "'
 let g:vimshell_prompt_pattern='^\%(\f\|\\.\)\+> '
+
 "======================
 "  vim-airline
 "======================
 let g:airline#extensions#tabline#enabled=1
+let g:airline_theme='papercolor'
 
 "======================
 "  FuzzyFinder
