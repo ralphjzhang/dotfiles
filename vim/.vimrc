@@ -32,6 +32,7 @@ NeoBundle 'rhysd/vim-clang-format'
 NeoBundle 'vim-scripts/a.vim'
 NeoBundle 'L9'
 NeoBundle 'FuzzyFinder'
+NeoBundle 'vim-scripts/csv.vim'
 NeoBundle 'Valloric/YouCompleteMe'
 
 call neobundle#end()
