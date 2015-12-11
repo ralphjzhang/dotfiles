@@ -2,9 +2,11 @@
 
 function yum() {
   # if we get here, git should have be installed, but just make sure
-  sudo yum install git
-  sudo yum install tmux
-  sudo yum install vim
+  sudo yum -y install git tree tmux vim rubygems
+  gem install tmuxinator
+  gem source -r https://rubygems.org/
+  gem source -a http://rubygems.org/
+  gem install tmuxinator
 }
 
 function shell() {
