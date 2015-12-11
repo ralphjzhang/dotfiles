@@ -1,18 +1,39 @@
 #!/bin/bash
 
-rm -f ~/.bashrc
-ln -sf ~/Work/ralphjzhang/dotfiles/bash/.bashrc ~/
-rm -f ~/.tmux.conf
-ln -sf ~/Work/ralphjzhang/dotfiles/tmux/.tmux.conf ~/
-rm -f ~/.tmuxinator.yml
-ln -sf ~/Work/ralphjzhang/dotfiles/tmux/.tmuxinator.yml ~/
+function yum() {
+  # if we get here, git should have be installed, but just make sure
+  sudo yum install git
+  sudo yum install tmux
+  sudo yum install vim
+}
 
-rm -f ~/.vimrc
-ln -sf ~/Work/ralphjzhang/dotfiles/vim/.vimrc ~/
-rm -f ~/.ycm_extra_conf.py
-ln -sf ~/Work/ralphjzhang/dotfiles/vim/.ycm_extra_conf.py ~/
-rm -f ~/.vimshrc
-ln -sf ~/Work/ralphjzhang/dotfiles/vim/.vimshrc ~/
-mkdir -p ~/.vim/bundle
-# git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+function shell() {
+  rm -f ~/.bashrc
+  ln -sf ~/Work/ralphjzhang/dotfiles/bash/.bashrc ~/
+  rm -f ~/.tmux.conf
+  ln -sf ~/Work/ralphjzhang/dotfiles/tmux/.tmux.conf ~/
+  rm -f ~/.tmuxinator.yml
+  ln -sf ~/Work/ralphjzhang/dotfiles/tmux/.tmuxinator.yml ~/
+}
+
+function vim() {
+  rm -f ~/.vimrc
+  ln -sf ~/Work/ralphjzhang/dotfiles/vim/.vimrc ~/
+  rm -f ~/.ycm_extra_conf.py
+  ln -sf ~/Work/ralphjzhang/dotfiles/vim/.ycm_extra_conf.py ~/
+  rm -f ~/.vimshrc
+  ln -sf ~/Work/ralphjzhang/dotfiles/vim/.vimshrc ~/
+  mkdir -p ~/.vim/bundle
+  git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+}
+
+
+function all() {
+  yum
+  shell
+  vim
+}
+
+# main entry: call function directly by name
+$1
 
