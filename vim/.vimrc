@@ -126,7 +126,6 @@ set selectmode=mouse
 let mapleader=","
 let g:mapleader=","
 map <C-C> "+y <CR>
-nnoremap <silent> <F3> :Grep<CR>
 
 "======================
 "  Tab Config
