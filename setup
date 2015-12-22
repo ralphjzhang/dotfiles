@@ -2,7 +2,7 @@
 
 function yum() {
   # if we get here, git should have be installed, but just make sure
-  sudo yum -y install git tree tmux vim rubygems
+  sudo yum -y install git tree tmux gcc gcc-c++ vim rubygems
   sudo yum -y socat htop iperf
   gem install tmuxinator
   gem source -r https://rubygems.org/
@@ -30,11 +30,18 @@ function vim() {
   git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 }
 
+function ycm() {
+  cd ~/.vim/bundle/YouCompleteMe
+  sudo yum -y install python-devel
+  ./install.py --clang-completer
+}
+
 
 function all() {
   yum
   shell
   vim
+  ycm
 }
 
 # main entry: call function directly by name
