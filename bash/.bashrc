@@ -113,7 +113,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="/opt/devops/bin:$PATH:~/anaconda3/bin"
+export PATH="/opt/mars/juno/bin:/opt/devops/bin:$PATH"
 export EDITOR='vim'
 
 # my aliases

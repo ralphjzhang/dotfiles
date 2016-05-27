@@ -11,7 +11,7 @@ windows:
   - prod: 
       layout: main-vertical
       panes:
-        - ssh cinda-c7
-        - ssh cinda-c7
-        - ssh cinda-c7
+        - ssh prod-cindac
+        - ssh prod-cindac
+        - ssh prod-cindac
 
