@@ -33,6 +33,7 @@ NeoBundle 'vim-scripts/a.vim'
 NeoBundle 'L9'
 NeoBundle 'FuzzyFinder'
 NeoBundle 'vim-scripts/csv.vim'
+NeoBundle 'fatih/vim-go'
 NeoBundle 'Valloric/YouCompleteMe'
 
 call neobundle#end()

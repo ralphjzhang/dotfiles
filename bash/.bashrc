@@ -113,7 +113,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="/opt/mars/juno/bin:/opt/devops/bin:$PATH"
+export PATH="/opt/mars/juno/bin:/opt/devops/bin:/opt/gaia/toolchain/bin:$PATH"
+export GOROOT="/opt/gaia/toolchain"
 export EDITOR='vim'
 
 # my aliases
