@@ -12,8 +12,8 @@ function shell() {
   ln -sf ~/Work/ralphjzhang/dotfiles/bash/.bashrc ~/
   rm -f ~/.tmux.conf
   ln -sf ~/Work/ralphjzhang/dotfiles/tmux/.tmux.conf ~/
-  rm -rf ~/.tmuxp && mkdir ~/.tmuxp
-  ln -sf ~/Work/ralphjzhang/dotfiles/tmux/local.yml ~/.tmuxp/
+  rm -rf ~/.tmuxp
+  ln -sf ~/Work/ralphjzhang/dotfiles/tmux/tmuxp ~/.tmuxp
 }
 
 function vim() {

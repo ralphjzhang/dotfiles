@@ -1,0 +1,21 @@
+session_name: yi-vm
+root: ~/
+windows:
+  - window_name: commands
+    layout: even-horizontal
+    panes:
+      - shell_command: cd
+      - shell_command: cd Work
+  - window_name: code
+    panes:
+      - shell_command: cd ~/Work/infra/yi
+  - window_name: view
+    panes:
+      - shell_command: cd ~/Work/infra/yi
+  - window_name: prod
+    layout: main-vertical
+    panes:
+      - ssh prod-cindac
+      - ssh prod-cindac
+      - ssh prod-cindac
+
