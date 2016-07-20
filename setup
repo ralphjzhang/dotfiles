@@ -2,12 +2,9 @@
 
 function yum() {
   # if we get here, git should have be installed, but just make sure
-  sudo yum -y install git tree tmux gcc gcc-c++ vim rubygems
+  sudo yum -y install git tree tmux gcc gcc-c++ vim
   sudo yum -y socat htop iperf
-  gem install tmuxinator
-  gem source -r https://rubygems.org/
-  gem source -a http://rubygems.org/
-  gem install tmuxinator
+  pip install tmuxp
 }
 
 function shell() {
@@ -15,8 +12,8 @@ function shell() {
   ln -sf ~/Work/ralphjzhang/dotfiles/bash/.bashrc ~/
   rm -f ~/.tmux.conf
   ln -sf ~/Work/ralphjzhang/dotfiles/tmux/.tmux.conf ~/
-  rm -f ~/.tmuxinator.yml
-  ln -sf ~/Work/ralphjzhang/dotfiles/tmux/.tmuxinator.yml ~/
+  rm -rf ~/.tmuxp && mkdir ~/.tmuxp
+  ln -sf ~/Work/ralphjzhang/dotfiles/tmux/local.yml ~/.tmuxp/
 }
 
 function vim() {
